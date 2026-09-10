@@ -1,0 +1,41 @@
+item_id,item_name,category,make,technical_spec,unit
+BET-4501,Stainless Steel Hexagonal Bolt 10x50mm,Bolts,ABC Ind.,"Diameter 10 mm, Length 50 mm",Nos
+BET-4502,Mild Steel Hex Bolt M12 x 60,Bolts,Metro Engg.,M12 x 60 mm,Nos
+BET-4503,SS Hex Nut M10,Nuts,ABC Ind.,M10,Nos
+BET-4504,Mild Steel Nut M12,Nuts,Metro Engg.,M12,Nos
+BET-4505,50mm Mild Steel Pipe,Pipes,Eastern Tube Co.,Diameter 50 mm,M
+BET-4506,Mild Steel Pipe Dia 75mm,Pipes,Eastern Tubes,75 mm diameter,M
+BET-4507,Carbon Steel Gate Valve DN50,Valves,Flow Tech,50 mm,Nos
+BET-4508,CS Gate Valve 100 NB,Valves,FlowTech,100 mm,Nos
+BET-4509,Deep Groove Bearing 6205,Bearings,Prime Bearing Co.,6205,Nos
+BET-4510,Deep Groove Ball Bearing 6206,Bearings,Prime Bearings,6206,Nos
+BET-4511,Copper Power Cable 4 sq mm 1100V,Electrical Cables,Electro Core,"4 sq mm, 1.1 kV",M
+BET-4512,Copper Cable 6 sq.mm 1.1 KV,Electrical Cables,ElectroCore Pvt Ltd,"6 sq mm, 1100 V",M
+BET-4513,Mild Steel Plate 6mm,Steel Plates,Steel Works,6 mm thick,Kg
+BET-4514,MS Plate Thickness 10 mm,Steel Plates,SteelWorks Ltd.,10 mm,Kg
+BET-4515,SS 304 Plate 5mm,Steel Plates,SteelWorks,"Grade 304, thickness 5 mm",Kg
+BET-4516,MS Hex Bolt M16x80,Bolts,Metro Engineering,16 mm x 80 mm,Nos
+BET-4517,Stainless Steel Nut M12,Nuts,ABC Industries Ltd,M12,Nos
+BET-4518,Galvanized Iron Pipe Dia 50mm,Pipes,Eastern Tubes,50 mm,M
+BET-4519,Butterfly Valve DN150,Valves,Flow Tech,150 mm,Nos
+BET-4520,Ball Bearing 6208,Bearings,Prime Bearing,6208,Nos
+BET-4521,Copper Cable 10mm2 1.1KV,Electrical Cables,Electro Core,"10 sq mm, 1.1 kV",M
+BET-4522,MS Steel Plate 12mm,Steel Plates,SteelWorks,12 mm thick,Kg
+BET-4523,Stainless Steel 316 Plate 6mm,Steel Plates,Steel Works Ltd,"SS316, 6 mm",Kg
+BET-4524,Carbon Steel Gate Valve DN150,Valves,FlowTech,150 NB,Nos
+BET-4525,Mild Steel Pipe 100mm Dia,Pipes,Eastern Tubes Ltd,100 mm diameter,M
+BET-4526,SS Hex Bolt M10 x 60 mm,Bolts,ABC Ind.,M10 x 60 mm,Nos
+BET-4527,Mild Steel Hex Bolt M10 x 50mm,Bolts,Metro Engineering,M10 x 50 mm,Nos
+BET-4528,MS Hex Nut M10,Nuts,Metro Engg.,M10,Nos
+BET-4529,Stainless Steel Pipe 50mm,Pipes,Eastern Tube Co.,Dia 50 mm,M
+BET-4530,Check Valve DN50,Valves,Flow Tech,50 mm,Nos
+BET-4531,Deep Groove Bearing 6210,Bearings,Prime Bearings,6210,Nos
+BET-4532,Aluminium Cable 16 sq mm 1.1KV,Electrical Cables,ElectroCore,"16 sq mm, 1.1 kV",M
+BET-4533,MS Plate 8mm,Steel Plates,SteelWorks,8 mm thick,Kg
+BET-4534,SS304 Steel Plate 10mm,Steel Plates,SteelWorks Ltd.,"304, 10 mm",Kg
+BET-4535,MS Hex Bolt M20 x 100,Bolts,Metro Engg.,M20 x 100 mm,Nos
+BET-4536,Mild Steel Pipe 150 Dia,Pipes,Eastern Tubes,150 mm,M
+BET-4537,CS Gate Valve DN200,Valves,FlowTech,200 NB,Nos
+BET-4538,Copper Cable 25 sq mm 1.1kV,Electrical Cables,Electro Core,"25 sq mm, 1.1 kV",M
+BET-4539,Mild Steel Plate 16mm,Steel Plates,Steel Works,16 mm,Kg
+BET-4540,SS Hex Nut M16,Nuts,ABC Ind.,M16,Nos
