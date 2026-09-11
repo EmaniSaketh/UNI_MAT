@@ -5,12 +5,14 @@ from typing import Annotated
 import pandas as pd
 from fastapi import APIRouter, File, HTTPException, UploadFile
 
+from backend.adapters.sap_adapter import fetch_sap_materials, normalize_sap_materials
 from backend.core.national_code_generator import DynamicNationalCodeEngine
 
 
 router = APIRouter(prefix="/api")
 _base_dir = Path(__file__).resolve().parents[2]
 _engine = DynamicNationalCodeEngine()
+_erp_registry: list[dict] = []
 
 
 def _load_default_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
@@ -90,13 +92,39 @@ def get_accuracy() -> dict:
     }
 
 
-@router.get("/national-registry")
-def get_national_registry(limit: int = 40) -> dict:
-    limit = max(0, limit)
+@router.get("/erp/sap-materials")
+def get_sap_materials() -> dict:
+    """Return materials from SAP_ERP_URL, or the local demo ERP when unset."""
+    try:
+        materials = fetch_sap_materials()
+    except (RuntimeError, ValueError) as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    return {"status": "success", "source": "sap_odata", "data": materials}
+
+
+@router.post("/erp/sync-sap")
+def sync_sap_materials() -> dict:
+    global _erp_registry
+    try:
+        _erp_registry = normalize_sap_materials(fetch_sap_materials())
+    except (RuntimeError, ValueError) as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
     return {
         "status": "success",
-        "total_records": len(_registry[:limit]),
-        "data": _registry[:limit],
+        "message": f"Synchronized {len(_erp_registry)} SAP/ERP material records.",
+        "records_processed": len(_erp_registry),
+        "source": "sap_odata",
+    }
+
+
+@router.get("/national-registry")
+def get_national_registry(limit: int = 100):
+    limit = max(0, limit)
+    combined_registry = _registry + _erp_registry
+    return {
+        "status": "success",
+        "total_records": len(combined_registry[:limit]),
+        "data": combined_registry[:limit],
     }
 
 
