@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from backend.api.routes import router
 
@@ -13,6 +14,11 @@ app.add_middleware(
 )
 
 app.include_router(router)
+
+@app.get("/")
+def root():
+    """Redirects the root URL automatically to the national registry endpoint."""
+    return RedirectResponse(url="/api/national-registry")
 
 if __name__ == "__main__":
     import uvicorn
