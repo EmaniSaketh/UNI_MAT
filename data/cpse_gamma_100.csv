@@ -1,0 +1,101 @@
+legacy_code,description,material_group,vendor_name,dimensions,unit_of_measure
+GAM-882,HEX BOLT SS M10X50,Hardware,ABC Industries Ltd,M10 x 50,Numbers
+GAM-883,HEX BOLT MS M12X60,Hardware,Metro Engineering,M12 x 60,Numbers
+GAM-884,SS NUT M10,Hardware,ABC Industries,M10,Numbers
+GAM-885,MS NUT M12,Hardware,Metro Engg Ltd,M12,Numbers
+GAM-886,MS PIPE DIA 50MM,Piping,Eastern Tubes Ltd,Dia 50 mm,Meter
+GAM-887,MILD STEEL PIPE 75 MM,Piping,Eastern Tubes,75 mm,Meter
+GAM-888,GATE VALVE CS 50MM,Valves,Flowtech Industries,DN50,Numbers
+GAM-889,CARBON STEEL GATE VALVE 100MM,Valves,Flow Tech,DN100,Numbers
+GAM-890,BEARING 6205 DEEP GROOVE,Bearings,Prime Bearings Ltd,6205,Numbers
+GAM-891,6206 DEEP GROOVE BALL BRG,Bearings,Prime Bearing,6206,Numbers
+GAM-892,CU POWER CABLE 4SQMM 1.1KV,Cable,ElectroCore Pvt. Ltd.,"4 sq mm, 1100 V",Meter
+GAM-893,COPPER CABLE 6 SQMM 1100V,Cable,Electro Core,"6 sq mm, 1.1 kV",Meter
+GAM-894,MS PLATE THK 6MM,Steel Plate,SteelWorks Ltd,6 mm,KG
+GAM-895,MILD STEEL PLATE 10MM,Steel Plate,Steel Works,10 mm thickness,KG
+GAM-896,SS PLATE GRADE 304 5MM,Steel Plate,SteelWorks,"SS304, 5 mm",KG
+GAM-897,MS HEX BOLT M16X80,Hardware,Metro Engineering Ltd,M16 x 80,Numbers
+GAM-898,STAINLESS NUT M12,Hardware,ABC Industries Ltd,M12,Numbers
+GAM-899,GI PIPE 50MM,Piping,Eastern Tubes,50 mm dia,Meter
+GAM-900,BUTTERFLY VALVE DN150,Valves,FlowTech Industries,150 mm,Numbers
+GAM-901,BALL BRG 6208,Bearings,Prime Bearings,6208,Numbers
+GAM-902,CU CABLE 10SQMM 1.1KV,Cable,ElectroCore,"10 sq mm, 1100 V",Meter
+GAM-903,MS PLATE 12MM,Steel Plate,SteelWorks Ltd,12 mm,KG
+GAM-904,SS316 PLATE 6MM,Steel Plate,Steel Works,"SS316, 6 mm",KG
+GAM-905,CS GATE VALVE DN150,Valves,Flowtech,150 mm,Numbers
+GAM-906,MS PIPE DIA 100MM,Piping,Eastern Tubes,100 mm,Meter
+GAM-907,SS HEX BOLT M10X60,Hardware,ABC Industries Ltd,M10 x 60,Numbers
+GAM-908,MS HEX BOLT M10X50,Hardware,Metro Engineering,M10 x 50,Numbers
+GAM-909,MILD STEEL NUT M10,Hardware,Metro Engineering,M10,Numbers
+GAM-910,SS PIPE DIA 50MM,Piping,Eastern Tube Co,50 mm,Meter
+GAM-911,CHECK VALVE 50MM CS,Valves,Flow Tech,50 mm,Numbers
+GAM-912,DEEP GROOVE BEARING 6210,Bearings,Prime Bearings Ltd,6210,Numbers
+GAM-913,AL CABLE 16SQMM 1.1KV,Cable,ElectroCore,"16 sq mm, 1.1 kV",Meter
+GAM-914,MS PLATE THK 8MM,Steel Plate,SteelWorks,8 mm,KG
+GAM-915,SS304 PLATE 10MM,Steel Plate,Steel Works Ltd,"SS304, 10 mm",KG
+GAM-916,MS HEX BOLT M20X100,Hardware,Metro Engineering,M20 x 100,Numbers
+GAM-917,MS PIPE DIA 150MM,Piping,Eastern Tubes Ltd,150 mm,Meter
+GAM-918,CS GATE VALVE 200MM,Valves,FlowTech,200 mm,Numbers
+GAM-919,CU CABLE 25SQMM 1.1KV,Cable,Electro Core,"25 sq mm, 1.1 kV",Meter
+GAM-920,MS PLATE THK 16MM,Steel Plate,SteelWorks,16 mm,KG
+GAM-921,SS NUT M16,Hardware,ABC Industries Ltd,M16,Numbers
+GAM-962,HEX BOLT SS M8X40,Hardware,ABC Industries Ltd,M8 x 40,Numbers
+GAM-963,hex bolt ss m8x40,Hardware,ABC Industries Ltd,M8 x 40,Numbers
+GAM-964,HEX BOLT STAINLESS STEEL M8X40,Hardware,ABC Ind. Ltd,M8 x 40,Numbers
+GAM-965,HEX BOLT MS M10X40,Hardware,Metro Engineering Ltd,M10 x 40,Numbers
+GAM-966,hex bolt ms m10x40,Hardware,Metro Engineering Ltd,M10 x 40,Numbers
+GAM-967,HEX BOLT MILD STEEL M10X40,Hardware,Metro Engg. Ltd,M10 x 40,Numbers
+GAM-968,SS HEX NUT M8,Hardware,ABC Industries Ltd,M8,Numbers
+GAM-969,ss hex nut m8,Hardware,ABC Industries Ltd,M8,Numbers
+GAM-970,STAINLESS STEEL HEX NUT M8,Hardware,ABC Ind. Ltd,M8,Numbers
+GAM-971,MS NUT M16,Hardware,Metro Engineering Ltd,M16,Numbers
+GAM-972,ms nut m16,Hardware,Metro Engineering Ltd,M16,Numbers
+GAM-973,MILD STEEL NUT M16,Hardware,Metro Engg. Ltd,M16,Numbers
+GAM-974,MS PIPE DIA 25MM,Piping,Eastern Tubes Ltd,25 mm,Meter
+GAM-975,ms pipe dia 25mm,Piping,Eastern Tubes Ltd,25 mm,Meter
+GAM-976,MILD STEEL PIPE DIA 25MM,Piping,Eastern Tubes Ltd,25 mm,Meter
+GAM-977,MS PIPE 200MM,Piping,Eastern Tubes Ltd,200 mm,Meter
+GAM-978,ms pipe 200mm,Piping,Eastern Tubes Ltd,200 mm,Meter
+GAM-979,MILD STEEL PIPE 200MM,Piping,Eastern Tubes Ltd,200 mm,Meter
+GAM-980,SS PIPE DIA 75MM,Piping,Eastern Tubes,75 mm,Meter
+GAM-981,ss pipe dia 75mm,Piping,Eastern Tubes,75 mm,Meter
+GAM-982,STAINLESS STEEL PIPE DIA 75MM,Piping,Eastern Tubes,75 mm,Meter
+GAM-983,GI PIPE 100MM,Piping,Eastern Tubes Ltd,100 mm,Meter
+GAM-984,gi pipe 100mm,Piping,Eastern Tubes Ltd,100 mm,Meter
+GAM-985,GI PIPE 100MM,Piping,Eastern Tubes Ltd,100 mm,Meter
+GAM-986,GATE VALVE CS 25MM,Valves,Flowtech Industries,DN25,Numbers
+GAM-987,gate valve cs 25mm,Valves,Flowtech Industries,DN25,Numbers
+GAM-988,GATE VALVE CARBON STEEL 25MM,Valves,Flowtech Ind.,DN25,Numbers
+GAM-989,CS GATE VALVE DN250,Valves,FlowTech Industries,250 mm,Numbers
+GAM-990,cs gate valve dn250,Valves,FlowTech Industries,250 mm,Numbers
+GAM-991,CARBON STEEL GATE VALVE DN250,Valves,FlowTech Ind.,250 mm,Numbers
+GAM-992,BALL VALVE SS316 25MM,Valves,FlowTech Industries,25 mm,Numbers
+GAM-993,ball valve ss316 25mm,Valves,FlowTech Industries,25 mm,Numbers
+GAM-994,BALL VALVE STAINLESS STEEL316 25MM,Valves,FlowTech Ind.,25 mm,Numbers
+GAM-995,CHECK VALVE CS 100MM,Valves,Flow Tech,100 mm,Numbers
+GAM-996,check valve cs 100mm,Valves,Flow Tech,100 mm,Numbers
+GAM-997,CHECK VALVE CARBON STEEL 100MM,Valves,Flow Tech,100 mm,Numbers
+GAM-998,DEEP GROOVE BRG 6204,Bearings,Prime Bearings Ltd,6204,Numbers
+GAM-999,deep groove brg 6204,Bearings,Prime Bearings Ltd,6204,Numbers
+GAM-1000,DEEP GROOVE BRG 6204,Bearings,Prime Bearings Ltd,6204,Numbers
+GAM-1001,BALL BRG 6212,Bearings,Prime Bearing Ltd,6212,Numbers
+GAM-1002,ball brg 6212,Bearings,Prime Bearing Ltd,6212,Numbers
+GAM-1003,BALL BRG 6212,Bearings,Prime Bearing Ltd,6212,Numbers
+GAM-1004,CU POWER CABLE 16SQMM 1.1KV,Cable,ElectroCore Pvt. Ltd.,"16 sq mm, 1100 V",Meter
+GAM-1005,cu power cable 16sqmm 1.1kv,Cable,ElectroCore Pvt. Ltd.,"16 sq mm, 1100 V",Meter
+GAM-1006,CU POWER CABLE 16SQMM 1.1KV,Cable,ElectroCore Pvt. Ltd.,"16 sq mm, 1100 V",Meter
+GAM-1007,AL CABLE 25SQMM 1.1KV,Cable,ElectroCore Pvt Ltd,"25 sq mm, 1.1 kV",Meter
+GAM-1008,al cable 25sqmm 1.1kv,Cable,ElectroCore Pvt Ltd,"25 sq mm, 1.1 kV",Meter
+GAM-1009,AL CABLE 25SQMM 1.1KV,Cable,ElectroCore Pvt Ltd,"25 sq mm, 1.1 kV",Meter
+GAM-1010,COPPER CABLE 35SQMM 1.1KV,Cable,ElectroCore,"35 sq mm, 1.1 kV",Meter
+GAM-1011,copper cable 35sqmm 1.1kv,Cable,ElectroCore,"35 sq mm, 1.1 kV",Meter
+GAM-1012,COPPER CABLE 35SQMM 1.1KV,Cable,ElectroCore,"35 sq mm, 1.1 kV",Meter
+GAM-1013,MS PLATE THK 4MM,Steel Plate,SteelWorks Ltd,4 mm,KG
+GAM-1014,ms plate thk 4mm,Steel Plate,SteelWorks Ltd,4 mm,KG
+GAM-1015,MILD STEEL PLATE THK 4MM,Steel Plate,SteelWorks Ltd,4 mm,KG
+GAM-1016,MILD STEEL PLATE 20MM,Steel Plate,Steel Works Ltd,20 mm,KG
+GAM-1017,mild steel plate 20mm,Steel Plate,Steel Works Ltd,20 mm,KG
+GAM-1018,MILD STEEL PLATE 20MM,Steel Plate,Steel Works Ltd,20 mm,KG
+GAM-1019,SS304 PLATE 8MM,Steel Plate,SteelWorks Ltd,"SS304, 8 mm",KG
+GAM-1020,ss304 plate 8mm,Steel Plate,SteelWorks Ltd,"SS304, 8 mm",KG
+GAM-1021,STAINLESS STEEL304 PLATE 8MM,Steel Plate,SteelWorks Ltd,"SS304, 8 mm",KG

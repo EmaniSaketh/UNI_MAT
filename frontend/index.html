@@ -1,3 +1,4 @@
+@ -0,0 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +11,6 @@
         .container { max-width: 1100px; margin: 0 auto; }
         header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
         h1 { color: #1a365d; margin: 0; }
-        
-        /* KPI Metrics Grid */
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
-        .metric-card { background: white; border-radius: 8px; padding: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #2b6cb0; }
-        .metric-card.success { border-left-color: #38a169; }
-        .metric-card.purple { border-left-color: #805ad5; }
-        .metric-card h3 { margin: 0; font-size: 13px; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; }
-        .metric-value { font-size: 28px; font-weight: bold; color: #2d3748; margin: 8px 0 2px 0; }
-        .metric-sub { font-size: 12px; color: #a0aec0; margin: 0; }
-
         .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
         .controls { display: flex; gap: 10px; margin-bottom: 15px; }
         input[type="text"] { flex: 1; padding: 10px 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; }
@@ -39,36 +30,11 @@
     <header>
         <div>
             <h1>UniMat AI</h1>
-            <p style="margin: 5px 0 0 0; color: #718096;">National Material Master Registry & Performance Dashboard</p>
+            <p style="margin: 5px 0 0 0; color: #718096;">National Material Master Registry Dashboard</p>
         </div>
-        <button onclick="refreshAll()">🔄 Refresh Data & Metrics</button>
+        <button onclick="fetchRegistry()">🔄 Refresh Data</button>
     </header>
 
-    <!-- KPI Metrics Section -->
-    <div class="metrics-grid">
-        <div class="metric-card success">
-            <h3>AI Match Accuracy</h3>
-            <div class="metric-value" id="accVal">--%</div>
-            <p class="metric-sub">Ground Truth Verification</p>
-        </div>
-        <div class="metric-card">
-            <h3>Items Evaluated</h3>
-            <div class="metric-value" id="totalVal">--</div>
-            <p class="metric-sub">CPSE Material Records</p>
-        </div>
-        <div class="metric-card purple">
-            <h3>Perfect Matches</h3>
-            <div class="metric-value" id="matchVal">--</div>
-            <p class="metric-sub">Zero Discrepancies</p>
-        </div>
-        <div class="metric-card">
-            <h3>False Positives</h3>
-            <div class="metric-value" id="fpVal">--</div>
-            <p class="metric-sub">Strict Rule Validation</p>
-        </div>
-    </div>
-
-    <!-- Main Table Card -->
     <div class="card">
         <div class="controls">
             <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search by National ID, description, or material category...">
@@ -86,7 +52,7 @@
             </thead>
             <tbody id="tableBody">
                 <tr>
-                    <td colspan="5" style="text-align: center; color: #a0aec0;">Click "Refresh Data" or verify backend is running...</td>
+                    <td colspan="5" style="text-align: center; color: #a0aec0;">Click "Refresh Data" or check if FastAPI server is running...</td>
                 </tr>
             </tbody>
         </table>
@@ -94,31 +60,14 @@
 </div>
 
 <script>
-    const REGISTRY_API = 'http://127.0.0.1:8000/api/national-registry';
-    const ACCURACY_API = 'http://127.0.0.1:8000/api/accuracy';
-
-    async function fetchMetrics() {
-        try {
-            const response = await fetch(ACCURACY_API);
-            const data = await response.json();
-            
-            if (data.status === "success") {
-                document.getElementById('accVal').innerText = `${data.accuracy_percentage}%`;
-                document.getElementById('totalVal').innerText = data.total_evaluated;
-                document.getElementById('matchVal').innerText = data.correct_matches;
-                document.getElementById('fpVal').innerText = data.false_positives;
-            }
-        } catch (error) {
-            console.error('Error fetching metrics:', error);
-        }
-    }
+    const API_URL = 'http://127.0.0.1:8000/api/national-registry';
 
     async function fetchRegistry() {
         const tableBody = document.getElementById('tableBody');
         tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Loading records...</td></tr>';
 
         try {
-            const response = await fetch(REGISTRY_API);
+            const response = await fetch(API_URL);
             const result = await response.json();
             
             if (result.status === "success" && Array.isArray(result.data)) {
@@ -128,7 +77,7 @@
             }
         } catch (error) {
             console.error('Error:', error);
-            tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Error connecting to API at http://127.0.0.1:8000.</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Error connecting to API. Verify backend is running at http://127.0.0.1:8000.</td></tr>';
         }
     }
 
@@ -163,12 +112,7 @@
         });
     }
 
-    function refreshAll() {
-        fetchMetrics();
-        fetchRegistry();
-    }
-
-    window.onload = refreshAll;
+    window.onload = fetchRegistry;
 </script>
 
 </body>

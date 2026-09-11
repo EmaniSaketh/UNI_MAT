@@ -1,0 +1,101 @@
+material_code,material_description,material_type,manufacturer,specification,uom
+ALP-001,SS HEX BOLT M10 X 50 MM,Fastener,ABC Industries,M10 x 50 mm,PCS
+ALP-002,MS HEX BOLT M12 X 60 MM,Fastener,Metro Engineering,M12 x 60 mm,PCS
+ALP-003,SS NUT M10,Fastener,ABC Industries,M10,PCS
+ALP-004,MS NUT M12,Fastener,Metro Engineering,M12,PCS
+ALP-005,MS PIPE 50 MM,Pipe,Eastern Tubes,Dia 50 mm,MTR
+ALP-006,MS PIPE 75 MM,Pipe,Eastern Tubes,Dia 75 mm,MTR
+ALP-007,CS GATE VALVE 50 MM,Valve,FlowTech,50 mm,PCS
+ALP-008,CS GATE VALVE 100 MM,Valve,FlowTech,100 mm,PCS
+ALP-009,BALL BEARING 6205,Bearing,Prime Bearings,6205,PCS
+ALP-010,BALL BEARING 6206,Bearing,Prime Bearings,6206,PCS
+ALP-011,CU CABLE 4 SQMM 1.1KV,Electrical Cable,ElectroCore,"4 sq mm, 1.1 kV",MTR
+ALP-012,CU CABLE 6 SQMM 1.1KV,Electrical Cable,ElectroCore,"6 sq mm, 1.1 kV",MTR
+ALP-013,MS PLATE 6 MM,Steel Plate,SteelWorks,Thickness 6 mm,KG
+ALP-014,MS PLATE 10 MM,Steel Plate,SteelWorks,Thickness 10 mm,KG
+ALP-015,SS PLATE 304 5 MM,Steel Plate,SteelWorks,"SS304, 5 mm",KG
+ALP-016,MS HEX BOLT M16 X 80 MM,Fastener,Metro Engineering,M16 x 80 mm,PCS
+ALP-017,SS NUT M12,Fastener,ABC Industries,M12,PCS
+ALP-018,GI PIPE 50 MM,Pipe,Eastern Tubes,Dia 50 mm,MTR
+ALP-019,BUTTERFLY VALVE 150 MM,Valve,FlowTech,150 mm,PCS
+ALP-020,BALL BEARING 6208,Bearing,Prime Bearings,6208,PCS
+ALP-021,CU CABLE 10 SQMM 1.1KV,Electrical Cable,ElectroCore,"10 sq mm, 1.1 kV",MTR
+ALP-022,MS PLATE 12 MM,Steel Plate,SteelWorks,Thickness 12 mm,KG
+ALP-023,SS PLATE 316 6 MM,Steel Plate,SteelWorks,"SS316, 6 mm",KG
+ALP-024,CS GATE VALVE 150 MM,Valve,FlowTech,150 mm,PCS
+ALP-025,MS PIPE 100 MM,Pipe,Eastern Tubes,Dia 100 mm,MTR
+ALP-026,SS HEX BOLT M10 X 60 MM,Fastener,ABC Industries,M10 x 60 mm,PCS
+ALP-027,MS HEX BOLT M10 X 50 MM,Fastener,Metro Engineering,M10 x 50 mm,PCS
+ALP-028,MS NUT M10,Fastener,Metro Engineering,M10,PCS
+ALP-029,SS PIPE 50 MM,Pipe,Eastern Tubes,Dia 50 mm,MTR
+ALP-030,CHECK VALVE 50 MM,Valve,FlowTech,50 mm,PCS
+ALP-031,BALL BEARING 6210,Bearing,Prime Bearings,6210,PCS
+ALP-032,AL CABLE 16 SQMM 1.1KV,Electrical Cable,ElectroCore,"16 sq mm, 1.1 kV",MTR
+ALP-033,MS PLATE 8 MM,Steel Plate,SteelWorks,Thickness 8 mm,KG
+ALP-034,SS PLATE 304 10 MM,Steel Plate,SteelWorks,"SS304, 10 mm",KG
+ALP-035,MS HEX BOLT M20 X 100 MM,Fastener,Metro Engineering,M20 x 100 mm,PCS
+ALP-036,MS PIPE 150 MM,Pipe,Eastern Tubes,Dia 150 mm,MTR
+ALP-037,CS GATE VALVE 200 MM,Valve,FlowTech,200 mm,PCS
+ALP-038,CU CABLE 25 SQMM 1.1KV,Electrical Cable,ElectroCore,"25 sq mm, 1.1 kV",MTR
+ALP-039,MS PLATE 16 MM,Steel Plate,SteelWorks,Thickness 16 mm,KG
+ALP-040,SS NUT M16,Fastener,ABC Industries,M16,PCS
+ALP-041,SS HEX BOLT M8 X 40 MM,Fastener,ABC Industries,M8 x 40 mm,PCS
+ALP-042,STAINLESS STEEL HEX BOLT M8 X 40 MM,Fastener,ABC Industries,M8 x 40 mm,PCS
+ALP-043,SS HEX BOLT M8x40mm,Fastener,ABC Ind.,M8 x 40 mm,PCS
+ALP-044,MS HEX BOLT M10 X 40 MM,Fastener,Metro Engineering,M10 x 40 mm,PCS
+ALP-045,MILD STEEL HEX BOLT M10 X 40 MM,Fastener,Metro Engineering,M10 x 40 mm,PCS
+ALP-046,MS HEX BOLT M10x40mm,Fastener,Metro Engg.,M10 x 40 mm,PCS
+ALP-047,SS NUT M8,Fastener,ABC Industries,M8,PCS
+ALP-048,STAINLESS STEEL NUT M8,Fastener,ABC Industries,M8,PCS
+ALP-049,SS NUT M8,Fastener,ABC Ind.,M8,PCS
+ALP-050,MS NUT M16,Fastener,Metro Engineering,M16,PCS
+ALP-051,MILD STEEL NUT M16,Fastener,Metro Engineering,M16,PCS
+ALP-052,MS NUT M16,Fastener,Metro Engg.,M16,PCS
+ALP-053,MS PIPE 25 MM,Pipe,Eastern Tubes,Dia 25 mm,MTR
+ALP-054,MILD STEEL PIPE 25 MM,Pipe,Eastern Tubes,Dia 25 mm,MTR
+ALP-055,MS PIPE 25mm,Pipe,Eastern Tubes,Dia 25 mm,MTR
+ALP-056,MS PIPE 200 MM,Pipe,Eastern Tubes,Dia 200 mm,MTR
+ALP-057,MILD STEEL PIPE 200 MM,Pipe,Eastern Tubes,Dia 200 mm,MTR
+ALP-058,MS PIPE 200mm,Pipe,Eastern Tubes,Dia 200 mm,MTR
+ALP-059,SS PIPE 75 MM,Pipe,Eastern Tubes,"SS304, Dia 75 mm",MTR
+ALP-060,STAINLESS STEEL PIPE 75 MM,Pipe,Eastern Tubes,"SS304, Dia 75 mm",MTR
+ALP-061,SS PIPE 75mm,Pipe,Eastern Tubes,"SS304, Dia 75 mm",MTR
+ALP-062,GI PIPE 100 MM,Pipe,Eastern Tubes,Dia 100 mm,MTR
+ALP-063,GI PIPE 100 MM,Pipe,Eastern Tubes,Dia 100 mm,MTR
+ALP-064,GI PIPE 100mm,Pipe,Eastern Tubes,Dia 100 mm,MTR
+ALP-065,CS GATE VALVE 25 MM,Valve,FlowTech,25 mm,PCS
+ALP-066,CARBON STEEL GATE VALVE 25 MM,Valve,FlowTech,25 mm,PCS
+ALP-067,CS GATE VALVE 25mm,Valve,FlowTech,25 mm,PCS
+ALP-068,CS GATE VALVE 250 MM,Valve,FlowTech,250 mm,PCS
+ALP-069,CARBON STEEL GATE VALVE 250 MM,Valve,FlowTech,250 mm,PCS
+ALP-070,CS GATE VALVE 250mm,Valve,FlowTech,250 mm,PCS
+ALP-071,BALL VALVE SS316 25 MM,Valve,FlowTech,"SS316, 25 mm",PCS
+ALP-072,BALL VALVE STAINLESS STEEL316 25 MM,Valve,FlowTech,"SS316, 25 mm",PCS
+ALP-073,BALL VALVE SS316 25mm,Valve,FlowTech,"SS316, 25 mm",PCS
+ALP-074,CHECK VALVE 100 MM,Valve,FlowTech,"CS, 100 mm",PCS
+ALP-075,CHECK VALVE 100 MM,Valve,FlowTech,"CS, 100 mm",PCS
+ALP-076,CHECK VALVE 100mm,Valve,FlowTech,"CS, 100 mm",PCS
+ALP-077,BALL BEARING 6204,Bearing,Prime Bearings,6204,PCS
+ALP-078,BALL BEARING 6204,Bearing,Prime Bearings,6204,PCS
+ALP-079,BALL BEARING 6204,Bearing,Prime Bearings,6204,PCS
+ALP-080,BALL BEARING 6212,Bearing,Prime Bearings,6212,PCS
+ALP-081,BALL BEARING 6212,Bearing,Prime Bearings,6212,PCS
+ALP-082,BALL BEARING 6212,Bearing,Prime Bearings,6212,PCS
+ALP-083,CU CABLE 16 SQMM 1.1KV,Electrical Cable,ElectroCore,"16 sq mm, 1.1 kV",MTR
+ALP-084,CU CABLE 16 SQMM 1.1KV,Electrical Cable,ElectroCore,"16 sq mm, 1.1 kV",MTR
+ALP-085,CU CABLE 16 SQMM 1.1KV,Electrical Cable,ElectroCore,"16 sq mm, 1.1 kV",MTR
+ALP-086,AL CABLE 25 SQMM 1.1KV,Electrical Cable,ElectroCore,"25 sq mm, 1.1 kV",MTR
+ALP-087,AL CABLE 25 SQMM 1.1KV,Electrical Cable,ElectroCore,"25 sq mm, 1.1 kV",MTR
+ALP-088,AL CABLE 25 SQMM 1.1KV,Electrical Cable,ElectroCore,"25 sq mm, 1.1 kV",MTR
+ALP-089,CU CABLE 35 SQMM 1.1KV,Electrical Cable,ElectroCore,"35 sq mm, 1.1 kV",MTR
+ALP-090,CU CABLE 35 SQMM 1.1KV,Electrical Cable,ElectroCore,"35 sq mm, 1.1 kV",MTR
+ALP-091,CU CABLE 35 SQMM 1.1KV,Electrical Cable,ElectroCore,"35 sq mm, 1.1 kV",MTR
+ALP-092,MS PLATE 4 MM,Steel Plate,SteelWorks,Thickness 4 mm,KG
+ALP-093,MILD STEEL PLATE 4 MM,Steel Plate,SteelWorks,Thickness 4 mm,KG
+ALP-094,MS PLATE 4mm,Steel Plate,SteelWorks,Thickness 4 mm,KG
+ALP-095,MS PLATE 20 MM,Steel Plate,SteelWorks,Thickness 20 mm,KG
+ALP-096,MILD STEEL PLATE 20 MM,Steel Plate,SteelWorks,Thickness 20 mm,KG
+ALP-097,MS PLATE 20mm,Steel Plate,SteelWorks,Thickness 20 mm,KG
+ALP-098,SS PLATE 304 8 MM,Steel Plate,SteelWorks,"SS304, 8 mm",KG
+ALP-099,STAINLESS STEEL PLATE 304 8 MM,Steel Plate,SteelWorks,"SS304, 8 mm",KG
+ALP-100,SS PLATE 304 8mm,Steel Plate,SteelWorks,"SS304, 8 mm",KG

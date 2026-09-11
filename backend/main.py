@@ -4,10 +4,9 @@ from backend.api.routes import router
 
 app = FastAPI(title="UniMat AI API", version="1.0")
 
-# This block is required for React to talk to FastAPI!
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
