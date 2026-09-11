@@ -35,6 +35,16 @@ class MaterialCleaner:
             return "unknown"
         clean_uom = uom.lower().strip()
         return self.uom_mapping.get(clean_uom, clean_uom)
+    
+    # Add explicit confidence or accuracy scores inside the mapped item payload
+def compute_match_confidence(desc1, desc2):
+    # Basic token overlap or vector similarity metric
+    tokens1 = set(desc1.lower().split())
+    tokens2 = set(desc2.lower().split())
+    intersection = tokens1.intersection(tokens2)
+    union = tokens1.union(tokens2)
+    similarity = len(intersection) / len(union) if union else 0.0
+    return round(similarity * 100, 1)
 
     def normalize_material(self, material: CanonicalMaterial) -> CanonicalMaterial:
         """Takes a raw canonical record and fills in the normalized_data section."""
@@ -55,9 +65,10 @@ if __name__ == "__main__":
     
     cleaner = MaterialCleaner()
     
-    # Load one record from Alpha and one from Beta
-    alpha_records = process_alpha_data("data/cpse_alpha.csv")
-    beta_records = process_beta_data("data/cpse_beta.csv")
+    # Load one record from Alpha and one from Beta using correct filenames and absolute path relative to project root
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
+    alpha_records = process_alpha_data(os.path.join(base_dir, "data", "cpse_alpha_100.csv"))
+    beta_records = process_beta_data(os.path.join(base_dir, "data", "cpse_beta_100.csv"))
     
     test_records = [alpha_records[0], beta_records[0]]
     

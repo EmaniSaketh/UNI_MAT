@@ -91,6 +91,26 @@ def get_accuracy() -> dict:
         "total_records": len(_registry),
     }
 
+@router.patch("/national-registry/{national_id}/status")
+def update_registry_status(national_id: str, status: str):
+    global _registry
+    status = status.upper()
+    if status not in ["APPROVED", "DECLINED"]:
+        raise HTTPException(status_code=400, detail="Invalid status.")
+
+    found = False
+    for item in _registry:
+        if item.get("national_material_id") == national_id:
+            if "governance" not in item:
+                item["governance"] = {}
+            item["governance"]["status"] = status
+            found = True
+            break
+
+    if not found:
+        raise HTTPException(status_code=404, detail="ID not found.")
+    return {"status": "success", "national_material_id": national_id, "new_status": status}
+
 
 @router.get("/erp/sap-materials")
 def get_sap_materials() -> dict:
