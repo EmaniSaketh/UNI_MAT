@@ -2,80 +2,292 @@ import re
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(
+    os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "../..")
+    )
+)
+
 from backend.core.canonical_schema import CanonicalMaterial, NormalizedData
 
+
 class MaterialCleaner:
+
     def __init__(self):
-        # Dictionary to standardize units of measure (UOM)
+
+        # -----------------------------
+        # Units of Measurement
+        # -----------------------------
         self.uom_mapping = {
-            'pcs': 'pieces',
-            'nos': 'pieces',
-            'numbers': 'pieces',
-            'mtr': 'meter',
-            'm': 'meter',
-            'mm': 'millimeter',
-            'kg': 'kilogram',
-            'kgs': 'kilogram'
+            "pcs": "pieces",
+            "pc": "pieces",
+            "nos": "pieces",
+            "no": "pieces",
+            "numbers": "pieces",
+
+            "mtr": "meter",
+            "mtrs": "meter",
+            "m": "meter",
+
+            "mm": "millimeter",
+            "millimetre": "millimeter",
+            "millimetres": "millimeter",
+
+            "cm": "centimeter",
+            "centimetre": "centimeter",
+
+            "m": "meter",
+
+            "kg": "kilogram",
+            "kgs": "kilogram",
+
+            "g": "gram",
+            "gm": "gram",
+            "gms": "gram",
+
+            "l": "liter",
+            "ltr": "liter",
+            "litre": "liter",
+            "litres": "liter"
         }
 
+        # -----------------------------
+        # Industrial Abbreviations
+        # -----------------------------
+        self.term_mapping = {
+
+            # Materials
+            "ss": "stainless steel",
+            "s.s": "stainless steel",
+
+            "ms": "mild steel",
+            "m.s": "mild steel",
+
+            "cs": "carbon steel",
+            "c.s": "carbon steel",
+
+            "gi": "galvanized iron",
+            "g.i": "galvanized iron",
+
+            "ci": "cast iron",
+            "c.i": "cast iron",
+
+            "al": "aluminium",
+            "alu": "aluminium",
+
+            # Product terms
+            "hex": "hexagonal",
+            "hexg": "hexagonal",
+
+            "dia": "diameter",
+            "diam": "diameter",
+
+            "assy": "assembly",
+
+            "brg": "bearing",
+
+            "bkt": "bracket",
+
+            "gsk": "gasket",
+
+            "thk": "thickness",
+
+            # Common technical abbreviations
+            "od": "outer diameter",
+            "id": "inner diameter",
+
+            "lg": "length",
+
+            "wt": "weight"
+        }
+
+    # ==========================================================
+    # TEXT CLEANING
+    # ==========================================================
+
     def clean_text(self, text: str) -> str:
+
         if not text:
             return ""
-        # Convert to lowercase
-        text = text.lower()
-        # Remove special characters but keep spaces and alphanumeric
-        text = re.sub(r'[^a-z0-9\s]', ' ', text)
+
+        text = str(text).lower().strip()
+
+        # Normalize multiplication signs
+        text = text.replace("×", " x ")
+        text = text.replace("*", " x ")
+
+        # Normalize common separators
+        text = text.replace("-", " ")
+        text = text.replace("/", " ")
+
+        # Remove punctuation but preserve decimal points
+        text = re.sub(r'[^a-z0-9.\s]', ' ', text)
+
+        # Remove dots only when they are abbreviation-style dots,
+        # not decimal points.
+        text = re.sub(r'(?<=[a-z])\.(?=[a-z])', '', text)
+
         # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text).strip()
+        text = re.sub(r"\s+", " ", text).strip()
+
         return text
 
+    # ==========================================================
+    # STANDARDIZE INDUSTRIAL TERMS
+    # ==========================================================
+
+    def standardize_terms(self, text: str) -> str:
+
+        if not text:
+            return ""
+
+        words = text.split()
+
+        standardized_words = []
+
+        for word in words:
+
+            replacement = self.term_mapping.get(word, word)
+
+            standardized_words.append(replacement)
+
+        return " ".join(standardized_words)
+
+    # ==========================================================
+    # NORMALIZE UNITS
+    # ==========================================================
+
     def normalize_uom(self, uom: str) -> str:
+
         if not uom:
             return "unknown"
-        clean_uom = uom.lower().strip()
-        return self.uom_mapping.get(clean_uom, clean_uom)
-    
-    # Add explicit confidence or accuracy scores inside the mapped item payload
-def compute_match_confidence(desc1, desc2):
-    # Basic token overlap or vector similarity metric
-    tokens1 = set(desc1.lower().split())
-    tokens2 = set(desc2.lower().split())
-    intersection = tokens1.intersection(tokens2)
-    union = tokens1.union(tokens2)
-    similarity = len(intersection) / len(union) if union else 0.0
-    return round(similarity * 100, 1)
 
-    def normalize_material(self, material: CanonicalMaterial) -> CanonicalMaterial:
-        """Takes a raw canonical record and fills in the normalized_data section."""
-        clean_desc = self.clean_text(material.raw_data.description)
-        clean_uom = self.normalize_uom(material.raw_data.uom)
-        clean_cat = self.clean_text(material.raw_data.category) if material.raw_data.category else None
+        clean_uom = str(uom).lower().strip()
+
+        return self.uom_mapping.get(
+            clean_uom,
+            clean_uom
+        )
+
+    # ==========================================================
+    # NORMALIZE DIMENSIONS
+    # ==========================================================
+
+    def normalize_dimensions(self, text: str) -> str:
+
+        if not text:
+            return ""
+
+        # Normalize X between dimensions
+        text = re.sub(
+            r"(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)",
+            r"\1 x \2",
+            text
+        )
+
+        # Normalize number + MM
+        text = re.sub(
+            r"(\d+(?:\.\d+)?)\s*mm\b",
+            r"\1 mm",
+            text
+        )
+
+        # Normalize number + CM
+        text = re.sub(
+            r"(\d+(?:\.\d+)?)\s*cm\b",
+            r"\1 cm",
+            text
+        )
+
+        return text
+
+    # ==========================================================
+    # COMPLETE DESCRIPTION STANDARDIZATION
+    # ==========================================================
+
+    def standardize_description(self, text: str) -> str:
+
+        if not text:
+            return ""
+
+        # Step 1: clean
+        text = self.clean_text(text)
+
+        # Step 2: standardize industrial terminology
+        text = self.standardize_terms(text)
+
+        # Step 3: normalize dimensions
+        text = self.normalize_dimensions(text)
+
+        # Step 4: clean spaces again
+        text = re.sub(r"\s+", " ", text).strip()
+
+        return text
+
+    # ==========================================================
+    # NORMALIZE COMPLETE MATERIAL
+    # ==========================================================
+
+    def normalize_material(
+        self,
+        material: CanonicalMaterial
+    ) -> CanonicalMaterial:
+
+        clean_desc = self.standardize_description(
+            material.raw_data.description
+        )
+
+        clean_uom = self.normalize_uom(
+            material.raw_data.uom
+        )
+
+        clean_cat = (
+            self.standardize_description(
+                material.raw_data.category
+            )
+            if material.raw_data.category
+            else None
+        )
 
         material.normalized_data = NormalizedData(
             description=clean_desc,
             uom=clean_uom,
             category=clean_cat
         )
+
         return material
 
+
+# ==============================================================
+# TEST
+# ==============================================================
+
 if __name__ == "__main__":
-    from backend.adapters.alpha_adapter import process_alpha_data
-    from backend.adapters.beta_adapter import process_beta_data
-    
+
     cleaner = MaterialCleaner()
-    
-    # Load one record from Alpha and one from Beta using correct filenames and absolute path relative to project root
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
-    alpha_records = process_alpha_data(os.path.join(base_dir, "data", "cpse_alpha_100.csv"))
-    beta_records = process_beta_data(os.path.join(base_dir, "data", "cpse_beta_100.csv"))
-    
-    test_records = [alpha_records[0], beta_records[0]]
-    
-    print("\n--- NORMALIZATION TEST ---")
-    for rec in test_records:
-        normalized_rec = cleaner.normalize_material(rec)
-        print(f"\nCPSE Source: {normalized_rec.source.cpse_id}")
-        print(f"RAW Description : {normalized_rec.raw_data.description}")
-        print(f"CLEANED         : {normalized_rec.normalized_data.description}")
-        print(f"RAW UOM         : {normalized_rec.raw_data.uom}  -->  CLEANED UOM: {normalized_rec.normalized_data.uom}")
+
+    test_descriptions = [
+
+        "SS HEX BOLT M10 X 50 MM",
+
+        "Stainless Steel Hexagonal Bolt 10x50mm",
+
+        "HEX BOLT SS M10X50",
+
+        "SS HEX BOLT M10 X 8 MM",
+
+        "SS Circle BOLT M10 X 8 MM",
+
+        "GI BRG ASSY 10 MM"
+    ]
+
+    print("\n--- MATERIAL STANDARDIZATION TEST ---")
+
+    for description in test_descriptions:
+
+        result = cleaner.standardize_description(
+            description
+        )
+
+        print(f"\nRAW    : {description}")
+        print(f"OUTPUT : {result}")

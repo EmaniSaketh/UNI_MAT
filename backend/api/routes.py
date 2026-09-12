@@ -6,7 +6,7 @@ import pandas as pd
 from fastapi import APIRouter, File, HTTPException, UploadFile
 
 from backend.adapters.sap_adapter import fetch_sap_materials, normalize_sap_materials
-from backend.core.national_code_generator import DynamicNationalCodeEngine
+from backend.core.national_code_generator import DynamicNationalCodeEngine, NationalCodeGenerator
 
 
 router = APIRouter(prefix="/api")
@@ -172,3 +172,5 @@ async def upload_datasets(
     _gamma_data = gamma_data
     _registry = registry
     return {"status": "success", "records_processed": len(registry)}
+    DynamicNationalCodeEngine = NationalCodeGenerator
+    
